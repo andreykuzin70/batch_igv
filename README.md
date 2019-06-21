@@ -26,12 +26,17 @@ The script uses external packages, therefore, before attempting to use the scrip
   **--runScript**  Choice to run script in IGV automatically (Optional)
 
 The very first argument specifies the igv session that is being used for analysis, when specifying the name of session include the path to it.
+
 The second argument specifies the window size, which controls how many reads you will be able to see for each track. This also influences the size of the images.
+
 The third argument is the name under which you would like to save the generated batch script.
+
 The fourth argument designates the snapshot directory, which is the location where the images will be saved to.
-The fifth arguement is the file with the variant positions/locations where the snapshots need to be taken (should preferably be a .csv file to guarantee that the script runs),
-**The variant positions need to be in a csv file with headers labeled Chromosome and Position, the file may contain other information as well, however, those two are mandatory.**
-which also needs to be expressed as a path and name.
+
+The fifth arguement is the file with the variant positions/locations where the snapshots need to be taken, should be expressed as a path and name.
+
+**The variant positions need to be in a csv file with headers labeled Chromosome and Position, the file may contain other information as well, however, those two are mandatory to guarantee that the script runs.**
+
 Finally, the sixth argument is the path to the IGV batch, which is a crucial component if batch script needs to be run automatically. Also needs to be expressed as path.
 
 Listed above are the six mandatory arguments, however, there is a seventh optional argument (--runScript) which needs to be included if you would like to automatically generate 
