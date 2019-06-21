@@ -1,6 +1,8 @@
 # batch_igv
 Automating image generation in IGV by generating batch script.
 
+**Warning: Make sure no other IGV sessions are being used at the same time because they may be closed out of!!!**
+
 The script uses external packages, therefore, before attempting to use the script one needs to verify that the following libraries are installed:
  1. Pandas
  2. ArgParse
@@ -48,5 +50,5 @@ python batch_igv.py Y:\data\igv_sessions\AndreySession.xml 400 VariantPositionBa
 
 Example for macOS:
 ```
-python batch_igv.py /Users/sns50/Downloads/macOS_igvsession.xml 400 NewBatchFile /Users/sns50/Documents/SnapShots /Users/sns50/Downloads/hg002_deepvar_manual_currate.csv /Users/sns50/Downloads/IGV_2.5.3/igv.bat --runScript
+python batch_igv.py macOS_igv_test_session_ak_hg002.xml 400 NewBatchFile ../snapshots/test example_positions.csv ../IGV_2.5.3/igv.sh –runScript 
 ```
