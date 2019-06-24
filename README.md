@@ -27,19 +27,25 @@ The script uses external packages, therefore, before attempting to use the scrip
   
   **--range RANGE** - Controls how many bases are seen on either side of position
 
-The very first argument specifies the igv session that is being used for analysis, when specifying the name of session include the path to it.
+The very first argument specifies the igv session that is being used for analysis, when specifying the name include the absolute path. **Ex:** *C:\Users\ank22\igv_session.xml*
 
 The second argument specifies the window size, which controls how many reads you will be able to see for each track. This also influences the size of the images.
+**Ex:** *400*
 
 The third argument is the name under which you would like to save the generated batch script.
+**Ex:** *NameOfBatchFile*
 
-The fourth argument designates the snapshot directory, which is the location where the images will be saved to.
+The fourth argument designates the snapshot directory, which is the location where the images will be saved to. The script will create the directory if it is not an already existing one.
+**Ex:** *C:\Users\ank22\Documents\SnapShots*
 
-The fifth arguement is the file with the variant positions/locations where the snapshots need to be taken, should be expressed as a path and name.
+The fifth arguement is the file with the variant positions/locations where the snapshots need to be taken, should be expressed as a path and name as well.
+**Ex:** *C:\Users\ank22\Documents\PositionSet.csv*
 
 **The variant positions need to be in a csv file with headers labeled Chromosome and Position, the file may contain other information as well, however, those two are mandatory to guarantee that the script runs.**
 
-Finally, the sixth argument is the path to the IGV batch, which is a crucial component if batch script needs to be run automatically. Also needs to be expressed as path.
+Finally, the sixth argument is the path to the IGV batch (igv.bat for Windows users) or IGV sh (igv.sh for macOS users), which is a crucial component if batch script needs to be run automatically. Also needs to be expressed as path. 
+**Ex:** *C:\IGV_2.5.0\igv.bat* or *../IGV_2.5.3/igv.sh*
+
 
 Listed above are the six mandatory arguments, nonetheless, there are two optional arguments (--runScript, --range).
 Including the command **--runScript** will induce the script to automatically generate images, by opening IGV and running the unique batch script. And including the argument **--range (int value)** will change the default value of 50 bp on each side of the position to desired value, modifying the amount of visible bases, and adjusting window size horizontally.  
