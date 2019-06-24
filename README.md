@@ -12,18 +12,19 @@ The script uses external packages, therefore, before attempting to use the scrip
 
 ### Positional arguments:
 
- 1. igvSession   Name of IGV Session
- 2. windowSize   Size of Window
- 3. batchFile    Batch File Name
- 4. snapshotDir  Snapshots Directory
- 5. variantPos   Variant Positions
- 6. pathToIGV    Path to IGV batch
+ 1. **igvSession** - Name of IGV Session
+ 2. **windowSize** - Size of Window
+ 3. **batchFile** - Batch File Name
+ 4. **snapshotDir** - Snapshots Directory
+ 5. **variantPos** - Variant Positions
+ 6. **pathToIGV** - Path to IGV batch
 
 ### Optional arguments:
 
-  **-h, --help**   show this help message and exit
+  **-h, --help** - show this help message and exit
   
-  **--runScript**  Choice to run script in IGV automatically (Optional)
+  **--runScript** - Choice to run script in IGV automatically (Optional)
+  **--range RANGE** - Controls how many bases are seen on either side of position
 
 The very first argument specifies the igv session that is being used for analysis, when specifying the name of session include the path to it.
 
@@ -39,8 +40,8 @@ The fifth arguement is the file with the variant positions/locations where the s
 
 Finally, the sixth argument is the path to the IGV batch, which is a crucial component if batch script needs to be run automatically. Also needs to be expressed as path.
 
-Listed above are the six mandatory arguments, however, there is a seventh optional argument (--runScript) which needs to be included if you would like to automatically generate 
-the snapshots using the generated batch script to be run automatically.
+Listed above are the six mandatory arguments, nonetheless, there are two optional arguments (--runScript, --range).
+Including the command **--runScript** will induce the script to automatically generate images, by opening IGV and running the unique batch script. And including the argument **--range (int value)** will change the default value of 50 bp on each side of the position to desired value, modifying the amount of visible bases, and adjusting window size horizontally.  
 
 #### Down below are examples of how you would call the script in a command line:
 
@@ -51,10 +52,10 @@ python batch_igv.py C:\Users\ank22\igv_session.xml 400 BatchScriptName C:\Users\
 
 Example with optional parameter: 
 ```
-python batch_igv.py Y:\data\igv_sessions\AndreySession.xml 400 VariantPositionBatch Y:\data\SnapShots C:\Users\ank22\Documents\hg002_deepvar_manual_currate.csv C:\IGV_2.5.0\igv.bat --runScript
+python batch_igv.py Y:\data\igv_sessions\AndreySession.xml 400 VariantPositionBatch Y:\data\SnapShots C:\Users\ank22\Documents\hg002_deepvar_manual_currate.csv C:\IGV_2.5.0\igv.bat --runScript --range 500
 ```
 
 Example for macOS:
 ```
-python batch_igv.py macOS_igv_test_session_ak_hg002.xml 400 NewBatchFile ../snapshots/test example_positions.csv ../IGV_2.5.3/igv.sh –runScript 
+python batch_igv.py macOS_igv_test_session_ak_hg002.xml 400 NewBatchFile ../snapshots/test example_positions.csv ../IGV_2.5.3/igv.sh –runScript --range 500
 ```
