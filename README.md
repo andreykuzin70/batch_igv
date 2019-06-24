@@ -24,6 +24,7 @@ The script uses external packages, therefore, before attempting to use the scrip
   **-h, --help** - show this help message and exit
   
   **--runScript** - Choice to run script in IGV automatically (Optional)
+  
   **--range RANGE** - Controls how many bases are seen on either side of position
 
 The very first argument specifies the igv session that is being used for analysis, when specifying the name of session include the path to it.
