@@ -31,7 +31,7 @@ The script uses external packages, therefore, before attempting to use the scrip
 
 The very first argument specifies the igv session that is being used for analysis, when specifying the name include the absolute path. 
 
-**Ex:** *C:\Users\ank22\igv_session.xml*
+**Ex:** *C:\Users\ank22\igv_session.xml* or *macOS_igv_test_session_ak_hg002.xml*
 
 The second argument specifies the window size, which controls how many reads you will be able to see for each track. This also influences the size of the images.
 
@@ -43,11 +43,11 @@ The third argument is the name under which you would like to save the generated 
 
 The fourth argument designates the snapshot directory, which is the location where the images will be saved to. The script will create the directory if it is not an already existing one.
 
-**Ex:** *C:\Users\ank22\Documents\SnapShots*
+**Ex:** *C:\Users\ank22\Documents\SnapShots* or ../snapshots/test example_positions.csv*
 
 The fifth arguement is the file with the variant positions/locations where the snapshots need to be taken, should be expressed as a path and name as well.
 
-**Ex:** *C:\Users\ank22\Documents\PositionSet.csv*
+**Ex:** *C:\Users\ank22\Documents\PositionSet.csv* or or *../snapshots/test example_positions.csv*
 
 **The variant positions need to be in a csv file with headers labeled Chromosome and Position, the file may contain other information as well, however, those two are mandatory to guarantee that the script runs.**
 
@@ -73,5 +73,5 @@ python batch_igv.py Y:\data\igv_sessions\AndreySession.xml 400 VariantPositionBa
 
 Example for macOS:
 ```
-python batch_igv.py macOS_igv_test_session_ak_hg002.xml 400 NewBatchFile ../snapshots/test example_positions.csv ../IGV_2.5.3/igv.sh –runScript --range 500
+python batch_igv.py macOS_igv_test_session_ak_hg002.xml 400 NewBatchFile ../snapshots ../snapshots/test example_positions.csv ../IGV_2.5.3/igv.sh –runScript --range 500
 ```
