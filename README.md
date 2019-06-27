@@ -9,6 +9,8 @@ The script uses external packages, therefore, before attempting to use the scrip
  3. os
  4. sys
  5. time
+ 
+ One other dependecy that the script has is it requires **igvtools** to be downloaded as well.
 
 ### Positional arguments:
 
