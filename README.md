@@ -1,6 +1,8 @@
 # batch_igv
 Automating image generation in IGV by generating batch script.
 
+**Link to IGV Batch Script Documentation:** https://software.broadinstitute.org/software/igv/PortCommands
+
 **Warning: Make sure no other IGV sessions are being used at the same time because they may be closed out of!!!**
 
 The script uses external packages, therefore, before attempting to use the script one needs to verify that the following libraries are installed:
